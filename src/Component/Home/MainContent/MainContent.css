@@ -1,0 +1,34 @@
+.parallax-container {
+    height: calc(100vh - 70px); /* Adjust height as needed */
+    overflow: hidden;
+  }
+  .parallax {
+    background-image: url('/public/Assets/Logo/backgruond.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Adjust height as needed */
+    transition: transform 0.1s ease-out;
+   
+  }
+  .parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for darkness */
+}
+.contentSection{
+  position: relative;
+  width:100%;
+  height: 300px;
+  z-index: 99999999;
+}
+.contentText{
+  z-index: 99999999999999999;
+}
+.contentText p{
+   font-size: 20px;
+   color: #fff;
+}

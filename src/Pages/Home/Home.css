@@ -1,0 +1,674 @@
+.mainHome {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+}
+.headerSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 25px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px lightgray;
+}
+.headerLeft {
+  width: 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.iconMobile {
+  width: 35px;
+  height: 35px;
+  visibility: hidden;
+  margin-top: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.iconMobile img {
+  width: 100%;
+  height: 100%;
+}
+.logoName {
+  width: calc(100% - 50px);
+  padding-left: 10px;
+}
+.logoName p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.logoSection {
+  width: 50px;
+  height: 50px;
+}
+.logoSection img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.headerRight {
+  width: 60%;
+}
+.headerRightTop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.headerRightBottom {
+  width: 100%;
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.headerLinks {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.mailSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0px 10px;
+}
+.mailSection img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+.headerOpen {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  z-index: 88889;
+  background-image: url("/public/Assets/Logo/backgruond.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerContainer {
+  width: 80%;
+  height: 80%;
+  z-index: 88888888888888;
+}
+.headerOpen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Adjust the alpha value for darkness */
+}
+.headerContainerUnit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  font-size: 20px;
+  z-index: 99999999999;
+  margin-bottom: 25px;
+}
+.headerContainerUnit img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.mainContent {
+  width: 100%;
+  height: calc(100% - 70px);
+  background-image: url("/public/Assets/Logo/backgruond.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.aboutSection {
+  width: 100%;
+  padding: 40px 50px;
+}
+.aboutText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.aboutTitle {
+  width: 100%;
+  text-align: center;
+}
+.aboutTitle p {
+  font-size: 30px;
+  font-weight: bold;
+}
+.aboutDesc {
+  width: 100%;
+  text-align: center;
+}
+.aboutCardSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px;
+}
+.aboutCard {
+  width: 20%;
+  margin: 0px 2%;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px grey;
+}
+
+.industrySection {
+  width: 100%;
+  padding: 50px 50px;
+  background-image: url(https://www.hillsonshoes.com/wp-content/uploads/2021/10/bg4.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+.industryText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.industryTitle {
+  width: 100%;
+  text-align: center;
+}
+.industryTitle p {
+  font-size: 40px;
+  font-weight: bold;
+  color: yellow;
+}
+.industryDesc {
+  width: 100%;
+  text-align: center;
+}
+.industryDesc p {
+  color: #fff;
+}
+.industryCardSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 8878887;
+  padding: 50px;
+}
+.industryCard {
+  width: 30%;
+  margin: 0px 2%;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px grey;
+}
+.industryCard img {
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  border-radius: 15px;
+}
+
+.strengthSection {
+  width: 100%;
+  padding: 40px 50px;
+}
+.strengthText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.strengthTitle {
+  width: 100%;
+  text-align: center;
+}
+.strengthTitle p {
+  font-size: 30px;
+  font-weight: bold;
+}
+.strengthDesc {
+  width: 100%;
+  text-align: center;
+}
+.strengthCardSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 8878887;
+  padding: 50px;
+}
+.strengthCard {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid yellow;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 30px;
+}
+.strengthCardInner {
+  width: 180px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.strengthCardInnerTitle{
+    width:100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.strengthDescription{
+    width:100%;
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+}
+.strengthCardInner img{
+    width:30px;
+    height:30px;
+}
+
+.productSection {
+  width: 100%;
+  padding: 50px 50px;
+  background-image: url(https://www.hillsonshoes.com/wp-content/uploads/2021/10/bg4.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+.productText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.productTitle {
+  width: 100%;
+  text-align: center;
+}
+.productTitle p {
+  font-size: 40px;
+  font-weight: bold;
+  color: yellow;
+}
+.productDesc {
+  width: 100%;
+  text-align: center;
+}
+.productDesc p {
+  color: #fff;
+}
+.productCardSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 8878887;
+  padding: 50px;
+}
+.productCard {
+  width: 23%;
+  height: 280px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px lightyellow;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  margin: 0 1%;
+}
+.productImg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productImg img {
+  width: 200px;
+  height: auto;
+}
+.productCardTitle {
+  width: 100%;
+  text-align: center;
+}
+.productCardTitle p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #33475b;
+}
+.productRate {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rateStrike p {
+  text-decoration: line-through;
+  color: grey;
+  font-size: 13px;
+}
+.rateOriginal {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.productCardBuy {
+  margin: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productCardBuy button {
+  padding: 10px 20px;
+  background-color: salmon;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.contactSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 100px;
+  background-color: lightgray;
+  position: relative;
+}
+.contactText {
+  width: 45%;
+}
+.contactHeader {
+  width: 100%;
+}
+.contactHeader p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+.contactDesc {
+  width: 100%;
+  padding-right: 70px;
+  margin-top: 40px;
+  color: #33475b;
+}
+.contactForm {
+  width: 55%;
+}
+.formRowHalf {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.formRowInput {
+  width: 50%;
+}
+.formRowInputFull {
+  width: 100%;
+}
+.formRowInput input {
+  width: 90%;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3px #33475b;
+}
+.formRowInputFull textarea {
+  width: 95%;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3px #33475b;
+}
+.formButton {
+  width: 100%;
+}
+.formButton button {
+  padding: 20px 25px;
+  background-color: salmon;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.testimonial {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.testimonialPhoto {
+  width: 50%;
+  position: relative;
+  height: 80vh;
+  background-image: url("/public/Assets/Logo/backgruond.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonialPhoto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Adjust the alpha value for darkness */
+}
+
+.testiStatsContainer {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 9999;
+}
+.testiUnit {
+  width: 48%;
+  margin-bottom: 50px;
+}
+.testiIcon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.testiIcon img {
+  width: 44px;
+  height: 44px;
+}
+.testiCount {
+  width: 100%;
+  color: yellow;
+  font-size: 20px;
+  text-align: center;
+}
+.testiTitle {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.testiPeople {
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testiHeader {
+  width: 70%;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.testiValue {
+  width: 70%;
+  text-align: center;
+  font-weight: 18px;
+  color: gray;
+}
+.clientPicName {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.clientPicName img {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+.clientName{
+    width:100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+@media screen and (max-width: 1024px) {
+  .heaederSection {
+    height: 40px;
+  }
+  .headerRight {
+    visibility: hidden;
+    width: 0%;
+  }
+  .iconMobile {
+    visibility: visible;
+  }
+  .headerLeft {
+    width: 100%;
+  }
+  .aboutSection {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  .aboutCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .industrySection {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .industryCardSection {
+    padding: 50px 0px;
+  }
+  .industryCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .strengthSection {
+    padding: 40px 20px;
+  }
+  .strengthCardSection {
+    padding: 50px 0px;
+  }
+  .strengthCard {
+    width: 250px;
+    height: 250px;
+    margin: 20px 10px;
+  }
+  .strengthCardInner {
+    width: 220px;
+    height: 220px;
+  }
+
+  .productSection {
+    padding: 50px 20px;
+  }
+  .productCardSection {
+    padding: 50px 0px;
+  }
+  .productCard {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .contactSection {
+    padding: 50px 20px;
+  }
+  .contactText {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .testiStatsContainer{
+    width: 90%;
+    height:90%;
+    
+  }
+  .testimonialPhoto{
+    width:100%;
+  }
+  .testiPeople{
+    width:100%;
+  }
+  .testiHeader{
+    width:100%;
+  }
+  .testiValue{
+    width:100%;
+  }
+ 
+}
