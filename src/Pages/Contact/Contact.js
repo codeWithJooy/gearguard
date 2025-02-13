@@ -1,8 +1,10 @@
 import React from 'react'
-import Header from '../../Component/Home/Header/Header';
+import Header from '../../Component/Common/Header/Header';    
 
 import "./Contact.css"
+import DynamicTitle from '../../Component/Common/DynamicTitle';
 const Contact=()=>{
+    DynamicTitle("GearGuard:Contact Us")
     return(
         <div className='mainHome'>
           <Header />
@@ -71,6 +73,11 @@ const Contact=()=>{
                         <div className='contactRow'>
                             <div className='contactRowFull'>
                                 <textarea rows={5} placeholder='Message'></textarea>
+                            </div>
+                        </div>
+                        <div className='contactRow'>
+                            <div className='contactRowHalf'>
+                                <button className='contactButton'>Send Message</button>
                             </div>
                         </div>
                     </div>

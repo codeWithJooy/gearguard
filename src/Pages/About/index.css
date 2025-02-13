@@ -1,0 +1,87 @@
+.mainHome {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+  }
+  .aboutmain{
+    width:100%;
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutmaincontainer{
+    width:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .aboutmaintext{
+    width:70%;
+  }
+  .aboutmainheader p{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .aboutmaindesc{
+    padding:0px 50px 20px 0px;
+  }
+  .aboutmainpic{
+    width:30%;
+  }
+  .aboutmainpic img{
+    width:100%;
+  }
+  .aboutSection{
+    width:100%;
+    padding:20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutContainer{
+    width:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .sectionContainer{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .sectionheader{
+    width:100%;
+    text-align: center;
+  }
+  .sectionheader p{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .sectioncardLeft{
+    width:100%;
+    margin-bottom: 80px;
+  }
+  .sectionTextLeft{
+    width:70%;
+  }
+  .sectionTextHeader{
+   margin-bottom: 10px;
+  }
+  .sectionTextHeader p{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .sectionimageleft{
+    width:30%;
+    border-radius: 50%;;
+  }
+  .sectionimageleft img{
+    border-radius: 50%;
+    height:200px;
+    width:200px
+  }

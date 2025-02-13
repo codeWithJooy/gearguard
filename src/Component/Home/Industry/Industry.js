@@ -13,13 +13,22 @@ const Industry = () => {
       </div>
       <div className="industryCardSection">
         <div className="industryCard">
-          <img src="Assets/Logo/capture.png" />
+          <img src="Assets/Logo/capture.PNG" />
         </div>
         <div className="industryCard">
-          <img src="Assets/Logo/capture.png" />
+          <img src="Assets/Logo/capture.PNG" />
         </div>
         <div className="industryCard">
-          <img src="Assets/Logo/capture.png" />
+          <img src="Assets/Logo/capture.PNG" />
+        </div>
+        <div className="industryCard">
+          <img src="Assets/Logo/capture.PNG" />
+        </div>
+        <div className="industryCard">
+          <img src="Assets/Logo/capture.PNG" />
+        </div>
+        <div className="industryCard">
+          <img src="Assets/Logo/capture.PNG" />
         </div>
       </div>
     </div>

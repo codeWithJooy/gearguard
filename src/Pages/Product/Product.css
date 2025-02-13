@@ -6,17 +6,29 @@
     padding:20px 50px;
 }
 .scrollUnit{
+    width:200px;
+    height:200px;
     margin:0px 10px;
     padding:20px;
     border:1px solid #fff;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .scrollUnitSelected{
+    width:200px;
+    height:200px;
     margin:0px 10px;
     padding:20px;
-    border:1px solid #33475b;
     cursor: pointer;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0 3px 3px #33475b;
 }
 .scrollUnit:hover{
     border:1px solid #33475b;
@@ -24,17 +36,49 @@
 }
 .scrollUnit img{
     width:120px;
-    height:auto;
+    height:100px;
 }
 .scrollUnitSelected img{
     width:120px;
-    height:auto;
+    height:100px;
+}
+.scrollUnitSelected .scrollText{
+    font-size: 18px;
+    font-weight: bold;
 }
 .scrollText{
     width:100%;
+    font-size: 16px;
     text-align: center;
 }
-
+.productSub{
+    width:100%;
+    margin:30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subTab{
+    margin:5px 15px;
+    padding:10px 20px;
+    border-radius: 10px;
+    border:1px solid #33475b;
+    cursor: pointer;
+}
+.subTab p{
+    font-size: 16px;
+}
+.subTabSelected{
+    margin:5px 15px;
+    padding:10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px #33475b;
+    cursor: pointer;
+}
+.subTabSelected p{
+    font-size: 18px;
+    font-weight: bold;
+}
 .products{
     width:100%;
     display: flex;

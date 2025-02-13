@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
+import ProductMainCard from "../ProductCard/ProductMainCard";
 
 const Product = () => {
   return (
@@ -13,10 +14,9 @@ const Product = () => {
         </div>
       </div>
       <div className="productCardSection">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductMainCard title={"Best Industrial Safety Shoes"}/>
+        <ProductMainCard title={"Ladies Safety Shoes"}/>
+        <ProductMainCard title={"Safety Gum Boots"}/>
       </div>
     </div>
   );
