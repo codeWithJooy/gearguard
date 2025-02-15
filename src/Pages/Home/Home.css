@@ -137,44 +137,7 @@
   background-size: cover;
   background-position: center;
 }
-.aboutSection {
-  width: 100%;
-  padding: 40px 50px;
-}
-.aboutText {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.aboutTitle {
-  width: 100%;
-  text-align: center;
-}
-.aboutTitle p {
-  font-size: 30px;
-  font-weight: bold;
-}
-.aboutDesc {
-  width: 100%;
-  text-align: center;
-}
-.aboutCardSection {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0px;
-}
-.aboutCard {
-  width: 20%;
-  margin: 0px 2%;
-  height: 200px;
-  border-radius: 15px;
-  box-shadow: 0 0 5px grey;
-}
+
 
 .industrySection {
   width: 100%;
@@ -228,77 +191,6 @@
   height: 100%;
   z-index: 9999;
   border-radius: 15px;
-}
-
-.strengthSection {
-  width: 100%;
-  padding: 40px 50px;
-}
-.strengthText {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.strengthTitle {
-  width: 100%;
-  text-align: center;
-}
-.strengthTitle p {
-  font-size: 30px;
-  font-weight: bold;
-}
-.strengthDesc {
-  width: 100%;
-  text-align: center;
-}
-.strengthCardSection {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  z-index: 8878887;
-  padding: 50px;
-}
-.strengthCard {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 1px solid yellow;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 30px;
-}
-.strengthCardInner {
-  width: 180px;
-  height: 180px;
-  padding: 20px;
-  border-radius: 50%;
-  box-shadow: 0 0 5px lightgray;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.strengthCardInnerTitle{
-    width:100%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-}
-.strengthDescription{
-    width:100%;
-    text-align: center;
-    font-size: 12px;
-    color: grey;
-}
-.strengthCardInner img{
-    width:30px;
-    height:30px;
 }
 
 .productSection {

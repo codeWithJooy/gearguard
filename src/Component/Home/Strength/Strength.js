@@ -1,4 +1,14 @@
 import React from "react";
+import "./Strength.css";
+
+const strengths = [
+  { title: "Quality Policy", description: "We ensure top-notch quality.", imgSrc: "Assets/Logo/strength/quality.webp" },
+  { title: "Network", description: "Our team is highly skilled.", imgSrc: "Assets/Logo/strength/network.webp" },
+  { title: "Advantage", description: "We have a strong network.", imgSrc: "Assets/Logo/strength/advantage.webp" },
+  { title: "Team Work", description: "We ensure top-notch quality.", imgSrc: "Assets/Logo/strength/team.webp" },
+  { title: "Versatility", description: "Our team is highly skilled.", imgSrc: "Assets/Logo/strength/verse.webp" },
+  { title: "Motto", description: "We have a strong network.", imgSrc: "Assets/Logo/strength/motto.webp" }
+];
 
 const Strength = () => {
   return (
@@ -12,41 +22,19 @@ const Strength = () => {
         </div>
       </div>
       <div className="strengthCardSection">
-        <div className="strengthCard">
-          <div className="strengthCardInner">
-            <img src="Assets/Logo/quality.webp" />
-            <div className="strengthCardInnerTitle">
-              <p>Quality</p>
-            </div>
-            <div className="strengthDescription">
-              <p>Small Description about our strength</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="strengthCard">
-          <div className="strengthCardInner">
-            <img src="Assets/Logo/team.webp" />
-            <div className="strengthCardInnerTitle">
-              <p>Team</p>
-            </div>
-            <div className="strengthDescription">
-              <p>Small Description about our strength</p>
+        {strengths.map((strength, index) => (
+          <div key={index} className="strengthCard">
+            <div className="strengthCardInner">
+              <img src={strength.imgSrc} alt={strength.title} />
+              <div className="strengthCardInnerTitle">
+                <p>{strength.title}</p>
+              </div>
+              <div className="strengthDescription">
+                <p>{strength.description}</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="strengthCard">
-          <div className="strengthCardInner">
-            <img src="Assets/Logo/network.webp" />
-            <div className="strengthCardInnerTitle">
-              <p>Network</p>
-            </div>
-            <div className="strengthDescription">
-              <p>Small Description about our strength</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

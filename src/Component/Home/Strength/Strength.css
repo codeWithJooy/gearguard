@@ -1,0 +1,128 @@
+/* Strength Section */
+.strengthSection {
+    width: 100%;
+    border:1px solid red;
+    padding: 40px 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Title and Description */
+.strengthText {
+    margin-bottom: 30px;
+    width:100%;
+}
+
+.strengthTitle p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.strengthDesc p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Strength Card Section */
+.strengthCardSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    width:80%;
+    max-width: 1200px;
+}
+
+/* Individual Strength Card */
+.strengthCard {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #ffcc00;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.strengthCard:hover {
+    transform: scale(1.1);
+}
+
+/* Inner Strength Card */
+.strengthCardInner {
+    width: 230px;
+    height: 230px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.strengthCard:hover .strengthCardInner {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Image Styling */
+.strengthCardInner img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+/* Strength Title */
+.strengthCardInnerTitle{
+    width:100%;
+}
+.strengthCardInnerTitle p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Strength Description */
+.strengthDescription p {
+    font-size: 14px;
+    color: grey;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .strengthCard {
+        width: 160px;
+        height: 160px;
+    }
+
+    .strengthCardInner {
+        width: 140px;
+        height: 140px;
+    }
+
+    .strengthCardInner img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .strengthCardInnerTitle p {
+        font-size: 16px;
+    }
+
+    .strengthDescription p {
+        font-size: 12px;
+    }
+}
