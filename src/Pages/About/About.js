@@ -7,6 +7,7 @@ import Industry from "../../Component/Home/Industry/Industry";
 import Proud from "../../Component/Proud/Proud";
 import Testimonial from "../../Component/Home/Testimonial/Testimonial";
 import Contact from "../../Component/Home/Contact/Contact";
+import Footer from "../../Component/Common/Footer/Footer";
 const About = () => {
   return (
     <div className="mainHome">
@@ -41,6 +42,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Proud />
       <div className="aboutSection">
         <div className="aboutContainer">
           <div className="sectionheader">
@@ -53,9 +55,9 @@ const About = () => {
         </div>
       </div>
       <Industry />
-      <Proud />
       <Testimonial />
       <Contact />
+      <Footer/>
     </div>
   );
 };

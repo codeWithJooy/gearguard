@@ -1,88 +1,115 @@
+/* Background styling */
+.proud-container {
+  background-image: url('../../../public/Assets/Logo/backgruond.jpg'); /* Ensure correct path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional */
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+}
+
+/* Dark overlay effect */
+.proud-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+/* Timeline container */
 .timeline-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 40px 0;
-  }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .header h2 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .header p {
-    font-size: 1rem;
-    color: #555;
-  }
-  
+  position: relative;
+  width: 80%;
+  padding: 40px 0;
+  margin: auto;
+  z-index: 10;
+  text-align: center;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.header{
+  width:100%;
+}
+.header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.header p {
+  font-size: 1rem;
+  color: lightgray;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Milestone Animation */
+.milestone {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+
+.milestone.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.milestone .content {
+  background: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 45%;
+  text-align: center;
+}
+
+.milestone.left {
+  justify-content: flex-start;
+}
+
+.milestone.right {
+  justify-content: flex-end;
+}
+
+/* Timeline Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #007bff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
   .timeline {
-    position: relative;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 80%;
   }
-  
-  .milestone {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-in-out;
-  }
-  
-  .milestone.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+
   .milestone .content {
-    background: #fff;
-    padding: 15px 25px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 45%;
-    text-align: center;
+    width: 80%;
   }
-  
-  .milestone.left {
-    justify-content: flex-start;
-  }
-  
-  .milestone.right {
-    justify-content: flex-end;
-  }
-  
-  .milestone::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12px;
-    height: 12px;
-    background: #007bff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .timeline::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    background: #007bff;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
+}

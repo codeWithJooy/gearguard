@@ -39,21 +39,23 @@ const Proud = () => {
   }, []);
 
   return (
-    <div className="timeline-container">
-      <div className="header">
-        <h2>Proud Moments</h2>
-        <p>Our company's journey through the years</p>
-      </div>
-      <div className="timeline">
-        {milestones.map((milestone, index) => (
-          <Milestone
-            key={index}
-            date={milestone.date}
-            description={milestone.description}
-            isLeft={index % 2 === 0}
-            isVisible={visibleMilestones.includes(index)}
-          />
-        ))}
+    <div className="proud-container">
+      <div className="timeline-container">
+        <div className="header">
+          <h2>Proud Moments</h2>
+          <p>Our company's journey through the years</p>
+        </div>
+        <div className="timeline">
+          {milestones.map((milestone, index) => (
+            <Milestone
+              key={index}
+              date={milestone.date}
+              description={milestone.description}
+              isLeft={index % 2 === 0}
+              isVisible={visibleMilestones.includes(index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

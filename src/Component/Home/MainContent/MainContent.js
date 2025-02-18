@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Typical from "react-typical";
-import "./MainContent.css"; // Import your CSS file for styling
+import "./MainContent.css"; // Import CSS for styling
 
 function MainContent() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
+    const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // Empty array means this effect will only run once when component mounts
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="parallax-container">
@@ -26,19 +20,29 @@ function MainContent() {
         <div className="contentSection">
           <div className="contentContainer">
             <div className="contentText">
-            <Typical
-             className="typical-text"
-                steps={[
-                  "We are a leading manufacturer, supplier, and exporter...",
-                  1000, // Pause for 1 second
-                  "Offering premium quality safety shoes, non-safety PVC boots, and safety gumboots...",
-                  1000,
-                  "At affordable prices.",
-                  1000,
-                ]}
-                loop={Infinity} // Keeps repeating the animation
-                wrapper="p"
-              />
+              <div className="contentMain">
+                <p>
+                  We manufacture, supply, and export safety shoes, PVC boots,
+                  and gumboots at affordable prices
+                </p>
+              </div>
+              <div className="contentDesc">
+                <p>
+                  Hillson began as a small unit with a vision to stand out and
+                  meet consumer needs. As one of India's largest safety shoe
+                  manufacturers, we serve diverse industries with certified,
+                  high-quality products. We prioritize Durability,
+                  Affordability, and Value for Money to enrich customers' lives.
+                  More than a company, Hillson is a family that stands together
+                  through thick and thin.
+                </p>
+              </div>
+              <div className="contentButton">
+                <button>Our Products</button>
+              </div>
+            </div>
+            <div className="contentImage">
+              <img src="Assets/Home/home.jpg" alt="Hillson Safety Shoes" />
             </div>
           </div>
         </div>

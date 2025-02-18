@@ -59,14 +59,18 @@
   .sectionheader{
     width:100%;
     text-align: center;
+    margin-bottom: 20px;
   }
   .sectionheader p{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
   }
   .sectioncardLeft{
     width:100%;
+    padding:15px;
+    border-radius: 10px;
     margin-bottom: 80px;
+    box-shadow: 0 0 5px 5px lightgrey;
   }
   .sectionTextLeft{
     width:70%;
@@ -80,7 +84,10 @@
   }
   .sectionimageleft{
     width:30%;
-    border-radius: 50%;;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .sectionimageleft img{
     border-radius: 50%;
