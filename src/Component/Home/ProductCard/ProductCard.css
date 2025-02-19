@@ -41,3 +41,10 @@
     font-weight: bold;
     color:#fff;
 }
+@media  (max-width: 1024px)  {
+    .productCardMain{
+        width: 80%;
+        min-height: 200px;
+        margin-bottom: 20px;
+    }
+  }

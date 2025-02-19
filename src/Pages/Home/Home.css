@@ -233,6 +233,7 @@
   z-index: 8878887;
   padding: 50px;
 }
+
 .productCard {
   width: 23%;
   height: 280px;
@@ -242,6 +243,13 @@
   background-color: #fff;
   border: 1px solid lightgray;
   margin: 0 1%;
+}
+@media  (max-width: 1024px)  {
+  .productCard{
+    width:80%;
+    height:200px;
+    margin-bottom: 20px;
+  }
 }
 .productImg {
   width: 100%;
