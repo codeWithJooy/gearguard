@@ -128,4 +128,12 @@
     .contentImage img {
         width: 100%;
     }
+    .contentSection{
+        padding: 20px 0px;
+        display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: red;
+    }
 }

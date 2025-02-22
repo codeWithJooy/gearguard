@@ -62,6 +62,11 @@ const Header = () => {
           <div className="headerLinks" onClick={() => handleNav("/contact")}>
             <p>Contact Us</p>
           </div>
+          <div className="headerLinks">
+          <a href="/Brochure/cat.pdf" download="Laxmi_True_Safe_Brochure.pdf">
+              <p>Get Brochure</p>
+            </a>
+          </div>
         </div>
       </div>
       {drop && (

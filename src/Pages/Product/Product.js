@@ -8,6 +8,7 @@ import ProductsCard from "../../Component/Product/ProductCard/ProductsCard";
 import Testimonial from "../../Component/Home/Testimonial/Testimonial";
 import Contact from "../../Component/Home/Contact/Contact";
 import DynamicTitle from "../../Component/Common/DynamicTitle";
+import Footer from "../../Component/Common/Footer/Footer";
 
 const Product = () => {
   DynamicTitle("Products:GearGuard")  
@@ -58,6 +59,7 @@ const Product = () => {
       </div>
       <Testimonial />
       <Contact />
+      <Footer/>
     </div>
   );
 };
