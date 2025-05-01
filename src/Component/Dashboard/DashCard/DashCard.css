@@ -1,0 +1,19 @@
+.dashCard{
+    width:22%;
+    min-height: 10px;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px lightgray;
+    margin-right: 50px;
+}
+.dashCardHeader{
+    width:100%;
+}
+.dashCardHeader p{
+    font-size: 30px;
+    font-weight: bold;
+}
+.dashCardDesc p{
+    font-size: 18px;
+
+}

@@ -1,0 +1,79 @@
+.dashSectionMain{
+    width:100%;
+    min-height:100vh;
+}
+.fuContainer{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+.fuContainer .header{
+    width:100%;
+    height:80px;
+    padding: 5px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffcdb2;
+}
+.fuSidebar{
+    position: absolute;
+    width:60%;
+    height:100%;
+    left:0;
+    top:0;
+    background-color: #6d6875;
+    padding:20px 15px;
+}
+.sidebarClose{
+    position: absolute;
+    right:15px;
+    top:15px;
+    width: 15px;
+    height:15px;
+}
+.sidebarUser{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sidebarUser img{
+    margin-right: 10px;
+}
+.sidebarUser p{
+    font-size: 16px;
+    font-weight: bold;
+    color:#ffcdb2;
+}
+.sidebarLinks{
+    margin-top: 60px;
+}
+.sidebarLink{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin:20px 0px;
+}
+.sidebarLink img{
+    margin-right: 10px;
+}
+.sidebarLink p{
+    font-size: 16px;
+    font-weight: bold;
+    color:#ffcdb2;
+}
+.dashTitle{
+    margin-left: 20px;
+}
+.dashTitle p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #6d6875;
+}

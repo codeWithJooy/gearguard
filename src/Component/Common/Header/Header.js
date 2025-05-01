@@ -99,11 +99,11 @@ const Header = () => {
             <div style={{ marginTop: "150px" }}></div>
             <div className="headerContainerUnit">
               <img src="Assets/Logo/mail_white.png" />
-              <p>enigma.abhi.ty@gmail.com</p>
+              <p>laxmitruesafe@gmail.com</p>
             </div>
             <div className="headerContainerUnit">
               <img src="Assets/Logo/phone_white.png" />
-              <p>9007453398</p>
+              <p>+91-8527561666</p>
             </div>
           </div>
         </div>
