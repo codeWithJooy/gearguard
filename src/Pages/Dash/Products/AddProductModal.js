@@ -8,6 +8,7 @@ const AddProductModal = ({ onClose, onSubmit }) => {
   const [productRate, setProductRate] = useState("");
   const [description, setDescription] = useState("");
   const [files, setFiles] = useState([]);
+  const [productDetails, setProductDetails] = useState([]);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: "image/*",
@@ -17,6 +18,21 @@ const AddProductModal = ({ onClose, onSubmit }) => {
       })));
     }
   });
+ 
+  const addDetail = () => {
+    setProductDetails([...productDetails, { title: "", value: "" }]);
+  };
+
+  const updateDetail = (index, field, value) => {
+    const newDetails = [...productDetails];
+    newDetails[index][field] = value;
+    setProductDetails(newDetails);
+  };
+
+  const removeDetail = (index) => {
+    const newDetails = productDetails.filter((_, i) => i !== index);
+    setProductDetails(newDetails);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +41,7 @@ const AddProductModal = ({ onClose, onSubmit }) => {
     formData.append("category", productCategory);
     formData.append("rate", productRate);
     formData.append("description", description);
+    formData.append("details", JSON.stringify(productDetails));
     files.forEach(file => {
       formData.append("images", file);
     });
@@ -59,15 +76,13 @@ const AddProductModal = ({ onClose, onSubmit }) => {
               required
             >
               <option value="">Select Category</option>
-              <option value="electronics">Electronics</option>
-              <option value="clothing">Clothing</option>
-              <option value="books">Books</option>
-              <option value="home">Home & Kitchen</option>
+              <option value="safelty">Safety Equipments</option>
+              <option value="weilding">Weilding Equipments</option>
             </select>
           </div>
 
           <div className="formGroup">
-            <label>Product Rate ($)</label>
+            <label>Product Rate</label>
             <input
               type="number"
               value={productRate}
@@ -83,6 +98,35 @@ const AddProductModal = ({ onClose, onSubmit }) => {
               onChange={(e) => setDescription(e.target.value)}
               required
             />
+          </div>
+          <div className="formGroup">
+            <label>Product Details</label>
+            <button type="button" onClick={addDetail} className="addDetailBtn">
+              Add Detail
+            </button>
+            {productDetails.map((detail, index) => (
+              <div key={index} className="detailRow">
+                <input
+                  type="text"
+                  placeholder="Title (e.g., Size)"
+                  value={detail.title}
+                  onChange={(e) => updateDetail(index, 'title', e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Value (e.g., 5,6,7)"
+                  value={detail.value}
+                  onChange={(e) => updateDetail(index, 'value', e.target.value)}
+                />
+                <button
+                  type="button"
+                  onClick={() => removeDetail(index)}
+                  className="removeDetailBtn"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
           </div>
 
           <div className="formGroup">

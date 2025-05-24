@@ -180,6 +180,7 @@
     max-width: 500px;
     max-height: 90vh;
     overflow-y: auto;
+    position: relative;
   }
   
   .modalHeader {
@@ -187,13 +188,20 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
+    width:100%;
   }
-  
+  .modalHeader h2{
+    color:#6d6875;
+    width:100%;
+  }
   .closeBtn {
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
+    position: absolute;
+    right:5px;
   }
   
   .formGroup {
@@ -268,4 +276,43 @@
   
   .modalActions button[type="button"] {
     background-color: #ddd;
+  }
+  .addDetailBtn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .addDetailBtn:hover {
+    background: #45a049;
+  }
+  
+  .detailRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .detailRow input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .removeDetailBtn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .removeDetailBtn:hover {
+    background: #cc0000;
   }
