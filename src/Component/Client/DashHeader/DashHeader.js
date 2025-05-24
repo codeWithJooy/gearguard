@@ -1,8 +1,28 @@
 import React, { useState } from "react";
-import "./DashHeader.css"
+import { useHistory } from "react-router-dom";
+import "./DashHeader.css";
 
-const DashHeader = ({title}) => {
+const DashHeader = ({ title, page }) => {
   const [open, SetOpen] = useState(false);
+
+  const history = useHistory();
+  const handleRoute = (route) => {
+    let val=""
+    switch (route) {
+      case "dashProducts":
+        val = "/dashproducts";
+        break;
+      case "dashMessages":
+        val = "/dashmessages";
+        break;
+      case "settings":
+        val = "/settings";
+        break;
+      default:
+        val = "/dash";
+    }
+    history.push(val);
+  };
   return (
     <>
       {open && (
@@ -18,21 +38,21 @@ const DashHeader = ({title}) => {
             <p>Abhishek Hazra</p>
           </div>
           <div className="sidebarLinks">
-            <div className="sidebarLink">
-              <img src="Assets/Dashboard/user.png" />
-              <p>Abhishek Hazra</p>
+            <div className="sidebarLink" onClick={()=>handleRoute()}>
+              <img src="Assets/Dashboard/dashboard.png" />
+              <p>Dashboard</p>
             </div>
-            <div className="sidebarLink">
-              <img src="Assets/Dashboard/user.png" />
-              <p>Abhishek Hazra</p>
+            <div className="sidebarLink" onClick={()=>handleRoute("dashProducts")}>
+              <img src="Assets/Dashboard/products.png" />
+              <p>Products</p>
             </div>
-            <div className="sidebarLink">
-              <img src="Assets/Dashboard/user.png" />
-              <p>Abhishek Hazra</p>
+            <div className="sidebarLink" onClick={()=>handleRoute("dashMessages")}>
+              <img src="Assets/Dashboard/message.png" />
+              <p>Messages</p>
             </div>
-            <div className="sidebarLink">
-              <img src="Assets/Dashboard/user.png" />
-              <p>Abhishek Hazra</p>
+            <div className="sidebarLink" onClick={()=>handleRoute("settings")}>
+              <img src="Assets/Dashboard/settings.png" />
+              <p>Settings</p>
             </div>
           </div>
         </div>

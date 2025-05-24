@@ -1,25 +1,25 @@
 import React from "react";
 import "./Products.css"
 
-const DashProductCard=()=>{
+const DashProductCard=({product})=>{
     return(
         <div className="dashProductCard">
         <div className="dashProductImage">
           <img src="Assets/Dashboard/Products/jacket.jpg" alt="" />
         </div>
         <div className="dashProductName">
-            <p>Product Name</p>
+            <p>{product.name}</p>
         </div>
         <div className="dashProductDetails">
-            <div className="productRate">
-                Rs 100
+            <div className="dashProductRate">
+                Rs {product.rate}
             </div>
             <div className="dashProductCategory">
-                Category
+                {product.category}
             </div>
         </div>
         <div className="dashProductDescription">
-            <p>Product Description is added here to kept a details what the hell the product is</p>
+            <p>{product.category}</p>
         </div>
       </div>
     )

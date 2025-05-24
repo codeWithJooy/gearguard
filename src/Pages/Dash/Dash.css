@@ -77,3 +77,100 @@
     font-weight: bold;
     color: #6d6875;
 }
+
+
+/* Dashboard Styles */
+.dashboardContent {
+    padding: 2rem;
+  }
+  
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .statsCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .statsCard:hover {
+    transform: translateY(-3px);
+  }
+  
+  .statsCard h3 {
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statsCard h2 {
+    color: #1e293b;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .cardIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cardIcon.total { background: #e0e7ff; color: #6366f1; }
+  .cardIcon.today { background: #f0fdf4; color: #22c55e; }
+  .cardIcon.month { background: #fff7ed; color: #f97316; }
+  
+  .trendIndicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .trendIndicator.positive { color: #22c55e; }
+  .trendIndicator.negative { color: #ef4444; }
+  
+  .chartCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .chartCard h3 {
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .chartContainer {
+    margin-top: 1rem;
+    height: 300px;
+  }
+  
+  /* Recharts Customization */
+  .recharts-cartesian-grid line {
+    stroke: #f1f5f9;
+  }
+  
+  .recharts-tooltip {
+    background: white !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px !important;
+    padding: 0.5rem 1rem;
+  }
+  
+  .recharts-default-tooltip li {
+    color: #1e293b !important;
+    font-size: 0.875rem !important;
+  }

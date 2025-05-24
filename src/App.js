@@ -10,6 +10,8 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import Loader from "./Component/Loader/Loader";
 import Dash from "./Pages/Dash/Dash";
 import Products from "./Pages/Dash/Products/Products"
+import Messages from "./Pages/Dash/Messages/Messages";
+import Settings from "./Pages/Dash/Settings/Settings";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -32,8 +34,11 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route path="/productDescription" component={ProductDescription} />
           <Route path="/dashboard" component={Dashboard} />
+
           <Route path="/dash" component={Dash}/>
           <Route path="/dashproducts" component={Products  } />
+          <Route path="/dashmessages" component={Messages} />
+          <Route path="/settings" component={Settings} />
         </Switch>
       )}
     </>
