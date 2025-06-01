@@ -5,7 +5,7 @@ const DashProductCard=({product})=>{
     return(
         <div className="dashProductCard">
         <div className="dashProductImage">
-          <img src="Assets/Dashboard/Products/jacket.jpg" alt="" />
+          <img src={product.images[0]} alt="" />
         </div>
         <div className="dashProductName">
             <p>{product.name}</p>
@@ -19,7 +19,7 @@ const DashProductCard=({product})=>{
             </div>
         </div>
         <div className="dashProductDescription">
-            <p>{product.category}</p>
+            <p>{product.description}</p>
         </div>
       </div>
     )
