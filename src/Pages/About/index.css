@@ -94,3 +94,9 @@
     height:200px;
     width:200px
   }
+  
+  @media screen and (max-width:1024px) {
+    .aboutmaindesc{
+      padding:0px 10px 20px 0px; 
+    }
+  }
