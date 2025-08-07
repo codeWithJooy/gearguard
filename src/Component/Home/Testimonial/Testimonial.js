@@ -52,20 +52,52 @@ const Testimonial = () => {
           <div className="testiHeader">
             <p>Our Lovely Customers Say</p>
           </div>
-
-          <div className="testiValue">
-            <p>
-              Such a nice experience we have working with the Company.Will
-              Recommend to our friends too.
-            </p>
-          </div>
-          <div className="clientPicName">
-            <img src="Assets/Logo/client.jpg" />
-            <div className="clientName">
-              <p>Abhi Hazra</p>
+          <div className="testimonialCardSection">
+            <div className="testimonialCard">
+              <img className="quote" src="Assets/Logo/quote.png"/>
+              <div className="testimonialCardText">
+                <p>Impressed By The professionalism and attention to detail.</p>
+              </div>
+              <div className="testimonialUser">
+                <div className="userPic">
+                  <img src="Assets/Logo/client.jpg" />
+                </div>
+                <div className="userDetails">
+                  <p className="clientMain">Client Name</p>
+                  <p>@client</p>
+                </div>
+              </div>
             </div>
-            <div className="clientCompany">
-              <p>Elevance Tech</p>
+            <div className="testimonialCard">
+              <img className="quote" src="Assets/Logo/quote.png"/>
+              <div className="testimonialCardText">
+                <p>Impressed By The professionalism and attention to detail.</p>
+              </div>
+              <div className="testimonialUser">
+                <div className="userPic">
+                  <img src="Assets/Logo/client.jpg" />
+                </div>
+                <div className="userDetails">
+                  <p className="clientMain">Client Name</p>
+                  <p>@client</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="testimonialCard">
+              <img className="quote" src="Assets/Logo/quote.png"/>
+              <div className="testimonialCardText">
+                <p>Impressed By The professionalism and attention to detail.</p>
+              </div>
+              <div className="testimonialUser">
+                <div className="userPic">
+                  <img src="Assets/Logo/client.jpg" />
+                </div>
+                <div className="userDetails">
+                  <p className="clientMain">Client Name</p>
+                  <p>@client</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

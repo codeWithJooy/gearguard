@@ -47,46 +47,55 @@
 
 /* Content container */
 .contentContainer {
-    width: 80%;
+    width: 70%;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-  
 }
-
-/* Text content */
-.contentText {
-    width: 50%;
-    color: #fff;
+.contectHeader{
+    width:100%;
+    text-align: center;
 }
-
-.contentMain {
-    font-size: 45px;
-    font-weight: bold;
-    line-height: 50px;
+.contectHeader p{
+ font-size: 60px;
+ font-weight: bold;
+ color:#fff;
 }
-
-.contentDesc {
-    font-size: 16px;
-    margin-top: 20px;
-    line-height: 1.6;
-}
-
-/* Image container */
-.contentImage {
-    width: 50%;
+.contactDesc{
+    width:50%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
 }
-
-.contentImage img {
-    width: 90%;
-    max-height: 400px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.contactDesc p{
+    font-size: 14px;
+    font-weight: bold;
+    color:#64cccb;
+   }
+.contactSectionButton{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:20px 0px;
+    padding:0;
 }
-
+.contactSectionButton img{
+    height:60px;
+    width:60px;
+}
+.productButton{
+    margin:0;
+    padding:0;
+    border:1px solid #fff;
+    border-radius: 15px;
+    padding:20px 15px;
+    color:#fff;
+    margin-bottom: 20px;
+}
 /* Animated typing effect */
 .typical-text {
     font-size: 42px;
@@ -106,8 +115,20 @@
   font-weight: bold;
   cursor: pointer;
 }
+.downBottom{
+    position:relative;
+    width:100%;
+    padding-top:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+    .parallax{
+        align-items: flex-start;
+        padding-top:100px
+    }
     .parallax-container {
         height: calc(130vh - 70px);
         overflow: hidden;
@@ -117,30 +138,27 @@
         position: relative;
     }
     .contentContainer {
+        width:100%;
         flex-direction: column;
         text-align: center;
-    }
-
-    .contentText, .contentImage {
-        width: 100%;
-    }
-
-    .contentMain {
-        font-size: 35px;
-    }
-
-    .contentDesc {
-        font-size: 14px;
-    }
-
-    .contentImage img {
-        width: 100%;
     }
     .contentSection{
         padding: 20px 0px;
         display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .contectHeader p{
+        font-size: 35px!important;
+    }
+    .contactDesc{
+        width:100%;
+        padding:0;
+        padding:20px 30px;
+        margin-bottom: 20px;
+    }
+    .contactDesc p{
+        font-size: 13px;
     }
 }

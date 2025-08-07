@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const Header = () => {
+const Header = ({page="Home"}) => {
   const [drop, setDrop] = useState(false);
   const history = useHistory();
   const handleDrop = () => {
@@ -29,37 +29,37 @@ const Header = () => {
       <div className="headerRight">
         <div className="headerRightTop">
           <div className="mailSection">
-            <img src="Assets/Logo/mail.png" />
+            <img src="Assets/Contact/email.png" />
             <p>enigma.abhi.ty@gmail.com</p>
           </div>
           <div className="mailSection">
-            <img src="Assets/Logo/mail.png" />
+            <img src="Assets/Contact/telephone.png" />
             <p>9007453398</p>
           </div>
           <div className="mailSection">
-            <img src="Assets/Logo/facebook_black.png" />
+            <img src="Assets/Contact/facebook.png" />
           </div>
           <div className="mailSection">
-            <img src="Assets/Logo/instagram_black.png" />
+            <img src="Assets/Contact/instagram.png" />
           </div>
           <div className="mailSection">
-            <img src="Assets/Logo/youtube_black.png" />
+            <img src="Assets/Contact/youtube.png" />
           </div>
           <div className="mailSection">
-            <img src="Assets/Logo/linkedin_black.png" />
+            <img src="Assets/Contact/linkedin.png" />
           </div>
         </div>
         <div className="headerRightBottom">
-          <div className="headerLinks" onClick={() => handleNav("/home")}>
+          <div className={`${page==="Home"?"highlightHeader":'headerLinks'}`} onClick={() => handleNav("/home")}>
             <p>Home</p>
           </div>
-          <div className="headerLinks" onClick={() => handleNav("/product")}>
+          <div className={`${page==="Products"?"highlightHeader":'headerLinks'}`} onClick={() => handleNav("/product")}>
             <p>Products</p>
           </div>
-          <div className="headerLinks" onClick={() => handleNav("/about")}>
+          <div className={`${page==="About"?"highlightHeader":'headerLinks'}`} onClick={() => handleNav("/about")}>
             <p>About</p>
           </div>
-          <div className="headerLinks" onClick={() => handleNav("/contact")}>
+          <div className={`${page==="Contact"?"highlightHeader":'headerLinks'}`} onClick={() => handleNav("/contact")}>
             <p>Contact Us</p>
           </div>
           <div className="headerLinks">

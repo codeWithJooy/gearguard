@@ -1,4 +1,6 @@
 import React from "react";
+import Testimonial from "../Testimonial/Testimonial";
+import Footer from "../../Common/Footer/Footer";
 const Contact = () => {
   return (
     <div className="contactSection">

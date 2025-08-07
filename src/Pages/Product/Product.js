@@ -16,7 +16,7 @@ const Product = () => {
   const [subLabel, setSublabel] = useState(safetySub[0].name);
   return (
     <div className="mainHome">
-      <Header />
+      <Header page={"Products"}/>
 
       <div className="productScroll">
         {category &&

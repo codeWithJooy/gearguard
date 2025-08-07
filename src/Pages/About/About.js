@@ -8,10 +8,12 @@ import Proud from "../../Component/Proud/Proud";
 import Testimonial from "../../Component/Home/Testimonial/Testimonial";
 import Contact from "../../Component/Home/Contact/Contact";
 import Footer from "../../Component/Common/Footer/Footer";
+import DynamicTitle from "../../Component/Common/DynamicTitle";
 const About = () => {
+  DynamicTitle("About:GearGuard")
   return (
     <div className="mainHome">
-      <Header />
+      <Header page={"About"}/>
       <div className="aboutmain">
         <div className="aboutmaincontainer">
           <div className="aboutmaintext">
