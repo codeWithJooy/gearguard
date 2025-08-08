@@ -8,7 +8,7 @@ const Contact = () => {
         <div className="contactHeader">
           <p>Contact With Us</p>
         </div>
-        <div className="contactDesc">
+        <div className="contactUnitDesc">
           <p>
             It's very easy to get in touch with us. Just use the contact form or
             pay us a visit for a coffee at the office. Dynamically innovate
@@ -38,7 +38,7 @@ const Contact = () => {
             <textarea placeholder="Message" rows={10}></textarea>
           </div>
         </div>
-        <div className="formButton">
+        <div className="formRowHalf">
           <button>Send Message</button>
         </div>
       </div>

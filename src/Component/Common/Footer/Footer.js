@@ -127,11 +127,22 @@ const Footer=()=>{
               <p>Connect</p>
             </div>
             <div className="unitContainer">
-             <div className="units">
-             </div>
+               <img src="Assets/Contact/instagram.png"/>
+               <img src="Assets/Contact/linkedin.png"/>
+               <img src="Assets/Contact/youtube.png"/>
+               <img src="Assets/Contact/facebook.png"/>
             </div>
           </div>
+
         </div>
+        <div className='footerPower'>
+            <div className='footerTop'>
+              <p>Copyright 2025 © LAXMI TRUE SAFE PVT. LTD. All Rights Reserved. (Terms of Use)</p>
+            </div>
+            <div className='footerBottom'>
+              <p>Developed and Managed by <span style={{color:"#64cccb"}}>The Elevance Tech</span></p>
+            </div>
+          </div>
       </div>
     )
 }

@@ -345,7 +345,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 50px 100px;
-  background-color: lightgray;
+  background-color: #04364a;
   position: relative;
 }
 .contactText {
@@ -357,13 +357,18 @@
 .contactHeader p {
   font-size: 22px;
   font-weight: bold;
-  color: #000;
+  color: #fff;
 }
-.contactDesc {
+.contactUnitDesc {
   width: 100%;
+  padding:0px 70px;
+  text-align: center;
   padding-right: 70px;
   margin-top: 40px;
   color: #33475b;
+}
+.contactUnitDesc p{
+  color:#64ccca;
 }
 .contactForm {
   width: 55%;
@@ -400,10 +405,14 @@
 }
 .formButton {
   width: 100%;
+  padding:0;
+  
 }
-.formButton button {
+.formRowHalf button {
+  margin:0;
+  width:90%;
   padding: 20px 25px;
-  background-color: salmon;
+  background-color: #64ccca;
   border-radius: 5px;
   color: #fff;
   font-size: 18px;
