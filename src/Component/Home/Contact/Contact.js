@@ -24,7 +24,7 @@ const Contact = () => {
           <div className="formRowInput">
             <input type="text" placeholder="Enter Email" />
           </div>
-        </div>
+        </div>{" "}
         <div className="formRowHalf">
           <div className="formRowInput">
             <input type="text" placeholder="Your Phone" />

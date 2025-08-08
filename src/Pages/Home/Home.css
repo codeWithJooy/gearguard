@@ -421,7 +421,7 @@
 }
 .testimonial {
   width: 100%;
-
+  min-height: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -481,20 +481,26 @@
 }
 .testiCount {
   width: 100%;
-  color: yellow;
+  color: #64cccb;
   font-size: 20px;
   text-align: center;
 }
+.testiCount p{
+  color:#64ccca;
+}
+
 .testiTitle {
   width: 100%;
   color: #fff;
   font-size: 16px;
   text-align: center;
 }
-
+.testiTitle p{
+  color:#fff;
+}
 .testiPeople {
   width: 50%;
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,6 +516,7 @@
 .testimonialCardSection{
   width:100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -519,6 +526,7 @@
   background-color: #65ccc6;
   border-radius:20px;
   position:relative;
+  margin-bottom: 30px;
 }
 .quote{
   position: absolute;
@@ -668,6 +676,7 @@
     width:100%;
   }
   .testiHeader{
+    margin-top: 20px;
     width:100%;
   }
   .testiValue{
@@ -680,5 +689,8 @@
       width: 80%;
       height:80%;
     }
-
+    .testimonialCard{
+      width:90%;
+      margin-left: 5%;
+    }
 }
