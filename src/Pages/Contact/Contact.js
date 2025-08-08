@@ -11,7 +11,7 @@ const Contact = () => {
     <div className="mainHome">
       <Header page={"Contact"}/>
       <div className="contactMain">
-        <div className="contactHeader">
+        <div className="contactPageHeader">
           <p>Contact Us</p>
         </div>
         <div className="contactDescription">

@@ -2,11 +2,11 @@
     width:100%;
     padding:20px 20px;
 }
-.contactHeader{
+.contactPageHeader{
     width:100%;
     text-align: center;
 }
-.contactHeader p{
+.contactPageHeader p{
     font-size: 35px;
     font-weight: bold;
 }
@@ -160,6 +160,10 @@
         margin-bottom: 20px;
     }
     .contactFormSection{
+        width:100%;
+        padding:20px 10px;
+    }
+    .contactMainForm{
         width:100%;
     }
     .addressContainer{
