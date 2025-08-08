@@ -408,12 +408,13 @@
   padding:0;
   
 }
-.formRowHalf button {
+
+.formSend button {
   margin:0;
-  width:90%;
-  padding: 20px 25px;
+  width:96%;
+  padding: 15px 25px;
   background-color: #64ccca;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
