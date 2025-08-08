@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const Header = ({page="Home"}) => {
+const Header = ({ page = "Home" }) => {
   const [drop, setDrop] = useState(false);
   const history = useHistory();
   const handleDrop = () => {
@@ -50,20 +50,38 @@ const Header = ({page="Home"}) => {
           </div>
         </div>
         <div className="headerRightBottom">
-          <div className={`${page==="Home"?"highlightHeader":'headerLinks'}`} onClick={() => handleNav("/home")}>
+          <div
+            className={`${page === "Home" ? "highlightHeader" : "headerLinks"}`}
+            onClick={() => handleNav("/home")}
+          >
             <p>Home</p>
           </div>
-          <div className={`${page==="Products"?"highlightHeader":'headerLinks'}`} onClick={() => handleNav("/product")}>
+          <div
+            className={`${
+              page === "Products" ? "highlightHeader" : "headerLinks"
+            }`}
+            onClick={() => handleNav("/product")}
+          >
             <p>Products</p>
           </div>
-          <div className={`${page==="About"?"highlightHeader":'headerLinks'}`} onClick={() => handleNav("/about")}>
+          <div
+            className={`${
+              page === "About" ? "highlightHeader" : "headerLinks"
+            }`}
+            onClick={() => handleNav("/about")}
+          >
             <p>About</p>
           </div>
-          <div className={`${page==="Contact"?"highlightHeader":'headerLinks'}`} onClick={() => handleNav("/contact")}>
+          <div
+            className={`${
+              page === "Contact" ? "highlightHeader" : "headerLinks"
+            }`}
+            onClick={() => handleNav("/contact")}
+          >
             <p>Contact Us</p>
           </div>
           <div className="headerLinks">
-          <a href="/Brochure/cat.pdf" download="Laxmi_True_Safe_Brochure.pdf">
+            <a href="/Brochure/cat.pdf" download="Laxmi_True_Safe_Brochure.pdf">
               <p>Get Brochure</p>
             </a>
           </div>
@@ -95,6 +113,14 @@ const Header = ({page="Home"}) => {
               onClick={() => handleNav("/contact")}
             >
               <p>Contact Us</p>
+            </div>
+            <div className="headerContainerUnit">
+              <a
+                href="/Brochure/cat.pdf"
+                download="Laxmi_True_Safe_Brochure.pdf"
+              >
+                <p>Get Brochure</p>
+              </a>
             </div>
             <div style={{ marginTop: "150px" }}></div>
             <div className="headerContainerUnit">

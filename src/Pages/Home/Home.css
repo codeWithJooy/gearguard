@@ -141,8 +141,12 @@
   z-index: 99999999999;
   margin-bottom: 25px;
 }
-.headerContainerUnit p{
+.headerContainerUnit p,a{
   color:#64ccca;
+  text-decoration: none;
+}
+.headerContainerUnit a{
+  text-decoration: none;
 }
 .headerContainerUnit img {
   height: 20px;
