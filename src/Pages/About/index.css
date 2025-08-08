@@ -13,6 +13,7 @@
   .aboutmaincontainer{
     width:70%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -52,6 +53,7 @@
   .sectionContainer{
     width:100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -96,7 +98,33 @@
   }
   
   @media screen and (max-width:1024px) {
+    .aboutmaincontainer{
+      width:90%;
+    }
+    .aboutContainer{
+      width:85%;
+    }
     .aboutmaindesc{
+      width:100%;
       padding:0px 10px 20px 0px; 
+    }
+    .aboutmaindesc p{
+      font-size: 14px;
+    }
+    .aboutmaintext{
+      width:100%;
+    }
+    .aboutmainpic{
+      width:100%;
+    }
+    .sectionTextLeft{
+      width:100%;
+    }
+    .sectionimageleft{
+      width:100%;
+      margin:10px 0px;
+    }
+    .sectionTextHeader{
+      text-align: center;
     }
   }
