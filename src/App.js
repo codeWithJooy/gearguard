@@ -28,7 +28,7 @@ const App = () => {
       {loading && <Loader />}
       {!loading && (
         <Switch>
-          <Route path="/home" component={Home} />
+          <Route path="/" component={Home} exact/>
           <Route path="/product" component={Product} />
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />

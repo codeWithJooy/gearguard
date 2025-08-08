@@ -52,7 +52,7 @@ const Header = ({ page = "Home" }) => {
         <div className="headerRightBottom">
           <div
             className={`${page === "Home" ? "highlightHeader" : "headerLinks"}`}
-            onClick={() => handleNav("/home")}
+            onClick={() => handleNav("/")}
           >
             <p>Home</p>
           </div>
@@ -92,7 +92,7 @@ const Header = ({ page = "Home" }) => {
           <div className="headerContainer">
             <div
               className="headerContainerUnit"
-              onClick={() => handleNav("/home")}
+              onClick={() => handleNav("/")}
             >
               <p>Home</p>
             </div>
