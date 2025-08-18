@@ -1,15 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../Component/Common/Header/Header";
 
 import "./Contact.css";
 import DynamicTitle from "../../Component/Common/DynamicTitle";
 import Testimonial from "../../Component/Home/Testimonial/Testimonial";
 import Footer from "../../Component/Common/Footer/Footer";
+import { uploadContact } from "../../actions/contactAction";
 const Contact = () => {
   DynamicTitle("Contact Us:GearGuard");
+  const [contactForm, setContactForm] = useState({
+    first: "",
+    last: "",
+    email: "",
+    phone: "",
+    message: "",
+    lookingFor: "Safety Shoes",
+    buyingFor: "Self",
+    who: "Consumer",
+    frequency: "One Time",
+  });
+  const handleTextChange = async (e) => {
+    const { name, value } = e.target;
+    setContactForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const submitContact = async () => {
+    let val = await uploadContact(contactForm);
+    setContactForm({
+      first: "",
+      last: "",
+      email: "",
+      phone: "",
+      message: "",
+      lookingFor: "Safety Shoes",
+      buyingFor: "Self",
+      who: "Consumer",
+      frequency: "One Time",
+    });
+    if (val) {
+      alert("Request Submitted Successfully");
+    } else {
+      alert("Something Went Wrong");
+    }
+  };
+
   return (
     <div className="mainHome">
-      <Header page={"Contact"}/>
+      <Header page={"Contact"} />
       <div className="contactMain">
         <div className="contactPageHeader">
           <p>Contact Us</p>
@@ -26,7 +66,9 @@ const Contact = () => {
             <div className="addressContainer">
               <div className="addressPageHeader">
                 <p>Les't talk</p>
-                <p>on Something <span>great</span></p>
+                <p>
+                  on Something <span>great</span>
+                </p>
                 <p>together</p>
               </div>
               <div className="addressRow">
@@ -49,17 +91,17 @@ const Contact = () => {
               </div>
               <div className="addressRow">
                 <div className="addressImg">
-                <img src="Assets/Contact/email.png" />
+                  <img src="Assets/Contact/email.png" />
                 </div>
                 <div className="addressField">
                   <p>sales@hillsonshoes.com</p>
                 </div>
               </div>
               <div className="addressRowBottom">
-                <img src="Assets/Contact/facebook.png"/>
-                <img src="Assets/Contact/linkedin.png"/>
-                <img src="Assets/Contact/instagram.png"/>
-                <img src="Assets/Contact/youtube.png"/>
+                <img src="Assets/Contact/facebook.png" />
+                <img src="Assets/Contact/linkedin.png" />
+                <img src="Assets/Contact/instagram.png" />
+                <img src="Assets/Contact/youtube.png" />
               </div>
             </div>
           </div>
@@ -67,28 +109,58 @@ const Contact = () => {
             <div className="contactMainForm">
               <div className="contactRow">
                 <div className="contactRowHalf">
-                  <input type="text" placeholder="First Name" />
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    name="first"
+                    value={contactForm.first}
+                    onChange={handleTextChange}
+                  />
                 </div>
                 <div className="contactRowHalf">
-                  <input type="text" placeholder="Last Name" />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    name="last"
+                    value={contactForm.last}
+                    onChange={handleTextChange}
+                  />
                 </div>
               </div>
               <div className="contactRow">
                 <div className="contactRowHalf">
-                  <input type="text" placeholder="Email" />
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    name="email"
+                    value={contactForm.email}
+                    onChange={handleTextChange}
+                  />
                 </div>
                 <div className="contactRowHalf">
-                  <input type="text" placeholder="Phone" />
+                  <input
+                    type="text"
+                    placeholder="Phone"
+                    name="phone"
+                    value={contactForm.phone}
+                    onChange={handleTextChange}
+                  />
                 </div>
               </div>
               <div className="contactRow">
                 <div className="contactRowFull">
-                  <textarea rows={5} placeholder="Message"></textarea>
+                  <textarea
+                    rows={5}
+                    placeholder="Message"
+                    name="message"
+                    value={contactForm.message}
+                    onChange={handleTextChange}
+                  ></textarea>
                 </div>
               </div>
               <div className="contactQuestionRow">
                 <p>I am looking for </p>
-                <select>
+                <select name="lookingFor" onChange={handleTextChange}>
                   <option>Safety Shoes</option>
                   <option>Gum Boots</option>
                   <option>Both</option>
@@ -120,15 +192,17 @@ const Contact = () => {
               </div>
               <div className="contactRow">
                 <div className="contactRowFull">
-                  <button className="contactFormButton">Send Message</button>
+                  <button className="contactFormButton" onClick={submitContact}>
+                    Send Message
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Testimonial/>
-      <Footer/>
+      <Testimonial />
+      <Footer />
     </div>
   );
 };

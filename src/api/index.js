@@ -3,12 +3,13 @@ import axios from "axios";
 const devApis = {
   SETTINGS_API: "http://localhost:5000/api/settings",
   PRODUCTS_API: "http://localhost:5000/api/product",
-  DATA_API:"http://localhost:5000/api/data",
+  CONTACT_API:"http://localhost:5000/api/message",
 
 };
 const prodApis = {
   SETTINGS_API: "https://rentpg.onrender.com/api/settings",
   PRODUCTS_API: "https://rentpg.onrender.com/api/product",
+  CONTACT_API:"http://localhost:5000/api/contact",
 }
 
 const getApiUrls = () => {
@@ -34,7 +35,7 @@ export const productApi=axios.create({
   baseURL:APIS.PRODUCTS_API
 })
 
-export const dataApi=axios.create({
-  baseURL:APIS.DATA_API
+export const contactApi=axios.create({
+  baseURL:APIS.CONTACT_API
 })
 
