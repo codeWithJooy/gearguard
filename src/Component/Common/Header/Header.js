@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { getDetails } from "../../../actions/dataaction";
 
 const Header = ({ page = "Home" }) => {
   const [drop, setDrop] = useState(false);
+  const [settings, setSettings] = useState({});
   const history = useHistory();
   const handleDrop = () => {
     setDrop(!drop);
@@ -10,6 +12,12 @@ const Header = ({ page = "Home" }) => {
   const handleNav = (path) => {
     history.push(path);
   };
+  useEffect(() => {
+    (async () => {
+      let data = await getDetails();
+      setSettings(data);
+    })();
+  }, []);
   return (
     <div className="headerSection">
       <div className="headerLeft">
@@ -30,23 +38,26 @@ const Header = ({ page = "Home" }) => {
         <div className="headerRightTop">
           <div className="mailSection">
             <img src="Assets/Contact/email.png" />
-            <p>enigma.abhi.ty@gmail.com</p>
+            <p>{settings.email}</p>
           </div>
           <div className="mailSection">
             <img src="Assets/Contact/telephone.png" />
-            <p>9007453398</p>
+            <p>{settings.phone}</p>
           </div>
           <div className="mailSection">
-            <img src="Assets/Contact/facebook.png" />
+            <a href={settings?.socialMedia?.facebook}><img src="Assets/Contact/facebook.png" /></a>
           </div>
           <div className="mailSection">
-            <img src="Assets/Contact/instagram.png" />
+          <a href={settings?.socialMedia?.instagram}><img src="Assets/Contact/instagram.png" /></a>
+            
           </div>
           <div className="mailSection">
-            <img src="Assets/Contact/youtube.png" />
+          <a href={settings?.socialMedia?.twitter}><img src="Assets/Contact/youtube.png" /></a>
+            
           </div>
           <div className="mailSection">
-            <img src="Assets/Contact/linkedin.png" />
+          <a href={settings?.socialMedia?.linkedin}><img src="Assets/Contact/linkedin.png" /></a>
+            
           </div>
         </div>
         <div className="headerRightBottom">
@@ -90,10 +101,7 @@ const Header = ({ page = "Home" }) => {
       {drop && (
         <div className="headerOpen">
           <div className="headerContainer">
-            <div
-              className="headerContainerUnit"
-              onClick={() => handleNav("/")}
-            >
+            <div className="headerContainerUnit" onClick={() => handleNav("/")}>
               <p>Home</p>
             </div>
             <div
@@ -125,11 +133,11 @@ const Header = ({ page = "Home" }) => {
             <div style={{ marginTop: "150px" }}></div>
             <div className="headerContainerUnit">
               <img src="Assets/Logo/mail_white.png" />
-              <p>laxmitruesafe@gmail.com</p>
+              <p>{settings.email}</p>
             </div>
             <div className="headerContainerUnit">
               <img src="Assets/Logo/phone_white.png" />
-              <p>+91-8527561666</p>
+              <p>{settings.phone}</p>
             </div>
           </div>
         </div>

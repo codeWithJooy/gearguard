@@ -3,6 +3,7 @@ import axios from "axios";
 const devApis = {
   SETTINGS_API: "http://localhost:5000/api/settings",
   PRODUCTS_API: "http://localhost:5000/api/product",
+  DATA_API:"http://localhost:5000/api/data",
 
 };
 const prodApis = {
@@ -31,5 +32,9 @@ export const settingApi = axios.create({
 
 export const productApi=axios.create({
   baseURL:APIS.PRODUCTS_API
+})
+
+export const dataApi=axios.create({
+  baseURL:APIS.DATA_API
 })
 
