@@ -17,18 +17,32 @@ export const productUpload = async (formData) => {
   }
 };
 
-export const getAllProducts=async ()=>{
-  try{
-    const headers=getHeaders()
-    const response=await productApi.get("/",headers);
+export const getAllProducts = async () => {
+  try {
+    const headers = getHeaders();
+    const response = await productApi.get("/", headers);
 
-    if(response.data.code==200){
-      console.log("Response Data is ",response.data.data)
-      return response.data.data
+    if (response.data.code == 200) {
+      console.log("Response Data is ", response.data.data);
+      return response.data.data;
     }
+  } catch (error) {
+    console.error("Error Fetching Products", error.message);
+    alert("Error Fetching products");
   }
-  catch(error){
-    console.error("Error Fetching Products",error.message);
-    alert("Error Fetching products")
+};
+
+export const getSingleProduct = async (productId) => {
+  try {
+    const headers = getHeaders();
+    const response = await productApi.get(`/${productId}`, headers);
+    if (response.data.code === 200) {
+      console.log("Response Data is ", response.data.data);
+      return response.data.data;
+    } else {
+      return {};
+    }
+  } catch (error) {
+    console.log("Error Is ", error.message);
   }
-}
+};

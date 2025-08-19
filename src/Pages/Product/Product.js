@@ -44,7 +44,7 @@ const Product = () => {
             />
           ))}
       </div>
-      <div className="productSub">
+      {/* <div className="productSub">
         {categorylabel === "Safety Equipments" &&
           safetySub.map((data, key) => (
             <CategorySub
@@ -63,11 +63,12 @@ const Product = () => {
               setSublabel={setSublabel}
             />
           ))}
-      </div>
+      </div> */}
       <div className="products">
         {filteredProducts &&
           filteredProducts.map((data, key) => (
             <ProductsCard
+              productId={data._id}
               name={data.name}
               images={data.images}
               description={data.description}
@@ -93,7 +94,7 @@ const CategoryUnit = ({
 }) => {
   return (
     <div
-      className={categoryType === label ? "scrollUnitSelected" : "scrollUnit"}
+      className={category === label ? "scrollUnitSelected" : "scrollUnit"}
       onClick={() => setCategorylabel(category)}
     >
       <img src={image} alt={label} />

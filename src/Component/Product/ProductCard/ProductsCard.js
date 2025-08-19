@@ -1,8 +1,14 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
-const ProductsCard = ({ name, images, description, rate }) => {
+const ProductsCard = ({ productId,name, images, description, rate }) => {
+  const history=useHistory()
+  const handleClick=()=>{
+    history.push("/productdescription",{productId})
+  }
+
   return (
-    <div className="productsCard">
+    <div className="productsCard" onClick={handleClick}>
       <div className="productsImg">
         <img src={images[0]} alt="" />
       </div>
@@ -15,7 +21,7 @@ const ProductsCard = ({ name, images, description, rate }) => {
         </div>
         <div className="productsRate">
           <div className="productsActual">
-            <p>Rs {rate * 1.1}</p>
+            <p>Rs {Math.floor(rate * 1.1)}</p>
           </div>
           <div className="productsOld">
             <p>Rs {rate}</p>
