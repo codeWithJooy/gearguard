@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../Component/Common/Header/Header";
 import { category } from "../../Data/Product/productCategory";
 import { safetySub } from "../../Data/Product/safetyCategory";
@@ -9,14 +9,27 @@ import Testimonial from "../../Component/Home/Testimonial/Testimonial";
 import Contact from "../../Component/Home/Contact/Contact";
 import DynamicTitle from "../../Component/Common/DynamicTitle";
 import Footer from "../../Component/Common/Footer/Footer";
+import { getAllProducts } from "../../actions/productAction";
 
 const Product = () => {
-  DynamicTitle("Products:GearGuard")  
-  const [categorylabel, setCategorylabel] = useState(category[0].categoryType);
+  DynamicTitle("Products:GearGuard");
+  const [categorylabel, setCategorylabel] = useState(category[0].category);
   const [subLabel, setSublabel] = useState(safetySub[0].name);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      let data = await getAllProducts();
+      setProducts(data);
+    })();
+  }, []);
+
+  const filteredProducts = products.filter(
+    (product) => product.category === categorylabel
+  );
   return (
     <div className="mainHome">
-      <Header page={"Products"}/>
+      <Header page={"Products"} />
 
       <div className="productScroll">
         {category &&
@@ -24,6 +37,7 @@ const Product = () => {
             <CategoryUnit
               key={key}
               categoryType={data.categoryType}
+              category={data.category}
               image={data.image}
               label={categorylabel}
               setCategorylabel={setCategorylabel}
@@ -51,26 +65,36 @@ const Product = () => {
           ))}
       </div>
       <div className="products">
-        <ProductsCard />
-        <ProductsCard />
-        <ProductsCard />
-        <ProductsCard />
-        <ProductsCard />
+        {filteredProducts &&
+          filteredProducts.map((data, key) => (
+            <ProductsCard
+              name={data.name}
+              images={data.images}
+              description={data.description}
+              rate={data.rate}
+            />
+          ))}
       </div>
       <Testimonial />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
 
 export default Product;
 
-const CategoryUnit = ({ categoryType, image, label, setCategorylabel }) => {
+const CategoryUnit = ({
+  categoryType,
+  category,
+  image,
+  label,
+  setCategorylabel,
+}) => {
   return (
     <div
       className={categoryType === label ? "scrollUnitSelected" : "scrollUnit"}
-      onClick={() => setCategorylabel(categoryType)}
+      onClick={() => setCategorylabel(category)}
     >
       <img src={image} alt={label} />
       <div className="scrollText">

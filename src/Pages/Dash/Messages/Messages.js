@@ -1,10 +1,24 @@
-import React from "react";
+import React,{useState,useReact, useEffect} from "react";
 import "./Messages.css"
 
 import DashHeader from "../../../Component/Client/DashHeader/DashHeader";
 import MessageCard from "./MessageCard";
+import { fetchMessages } from "../../../actions/contactAction";
 
 const Messages = () => {
+  const [messages,setMessages]=useState([])
+  const [drop,setDrop]=useState("all")
+  const [statusChange,setStatusChange]=useState(false)
+  const handleUpdate=(e)=>{
+    setDrop(e.target.value)
+  }
+  useEffect(()=>{
+   (async()=>{
+      const data=await fetchMessages(drop);
+      setMessages(data)
+      setStatusChange(false)
+   })()
+  },[drop,statusChange])
   return (
     <div className="dashSectionMain">
       <div className="fuContainer">
@@ -12,16 +26,18 @@ const Messages = () => {
           <DashHeader title={"Messages"} />
         </div>
         <div className="dashMessagesFilter">
-          <select>
-            <option>All</option>
-            <option>New</option>
-            <option>Read</option>
+          <select onChange={handleUpdate}>
+            <option value="">All</option>
+            <option value="unread">New</option>
+            <option value="contacted">Contacted</option>
           </select>
         </div>
         <div className="dashMessagesSection">
-            <MessageCard/>
-            <MessageCard/>
-            <MessageCard/>
+            {
+              messages && messages.map((data,key)=>(
+                <MessageCard val={data} setStatusChange={setStatusChange}/>
+              ))
+            }
         </div>
       </div>
     </div>

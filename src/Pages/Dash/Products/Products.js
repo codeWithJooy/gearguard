@@ -9,18 +9,21 @@ const Products = () => {
   const [showModal, setShowModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState([]);
+  const [productAdd, setProductAdd] = useState(false);
   const handleAddProduct = async (formData) => {
     // Handle form submission to your backend
     await productUpload(formData);
+    setProductAdd(true);
   };
   useEffect(() => {
     const fetchProducts = async () => {
       const data = await getAllProducts();
       setProducts(data);
+      setProductAdd(false);
     };
 
     fetchProducts();
-  }, []);
+  }, [productAdd]);
   const filteredProducts = products.filter(
     (product) =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -57,6 +60,7 @@ const Products = () => {
           src="Assets/Dashboard/plus.png"
           className="dashproductadd"
           onClick={() => setShowModal(true)}
+          alt=""
         />
         {showModal && (
           <AddProductModal

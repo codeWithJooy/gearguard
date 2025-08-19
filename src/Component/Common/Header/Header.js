@@ -22,10 +22,10 @@ const Header = ({ page = "Home" }) => {
     <div className="headerSection">
       <div className="headerLeft">
         <div className="logoSection">
-          <img src="Assets/Logo/logo.jpg" />
+          <img src={settings.logo} />
         </div>
         <div className="logoName">
-          <p>Laxmi True Safe</p>
+          <p>{settings.websiteName}</p>
         </div>
         <div className="iconMobile">
           {!drop && (

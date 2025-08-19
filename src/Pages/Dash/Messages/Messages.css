@@ -80,3 +80,22 @@
 .dashMessageText p{
   font-size: 13px;
 }
+.contactDateSection{
+  width:100%;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contactDate{
+  width:50%;
+}
+.contactDate p{
+  font-size: 13px;
+}
+.repliedDate{
+  width:50%;
+  text-align: right;
+}
+.repliedDate p{
+  font-size: 13px;
+}

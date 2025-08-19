@@ -20,13 +20,13 @@ export const settingsUpload = async (formData) => {
 export const settingsFetch = async () => {
   try {
     const headers=getHeaders()
-    const response = await settingApi.get("/",headers);
+    const response = await settingApi.get("/all",headers);
     if (response.data.code == 200) {
       console.log("Settings saved successfully:", response.data);
       return response.data;
     }
   } catch (error) {
     console.error("Error saving settings:", error.message);
-    alert("Error saving settings. Please try again.");
+    //alert("Error saving settings. Please try again.");
   }
 };

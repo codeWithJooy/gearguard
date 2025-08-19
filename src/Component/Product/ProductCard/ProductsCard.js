@@ -1,24 +1,24 @@
 import React from "react";
 
-const ProductsCard = () => {
+const ProductsCard = ({ name, images, description, rate }) => {
   return (
     <div className="productsCard">
       <div className="productsImg">
-        <img src="Assets/Logo/shoe.png" />
+        <img src={images[0]} alt="" />
       </div>
       <div className="productsText">
         <div className="productsTitle">
-          <p>Gum Shoes</p>
+          <p>{name}</p>
         </div>
         <div className="productsDescription">
-          <p>Smmall Description About Product</p>
+          <p>{description}</p>
         </div>
         <div className="productsRate">
           <div className="productsActual">
-            <p>Rs 12000</p>
+            <p>Rs {rate * 1.1}</p>
           </div>
           <div className="productsOld">
-            <p>Rs 10000</p>
+            <p>Rs {rate}</p>
           </div>
         </div>
       </div>

@@ -18,9 +18,6 @@ const DashProductCard=({product})=>{
                 {product.category}
             </div>
         </div>
-        <div className="dashProductDescription">
-            <p>{product.description}</p>
-        </div>
       </div>
     )
 }

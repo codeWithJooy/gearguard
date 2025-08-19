@@ -76,8 +76,8 @@ const AddProductModal = ({ onClose, onSubmit }) => {
               required
             >
               <option value="">Select Category</option>
-              <option value="safelty">Safety Equipments</option>
-              <option value="weilding">Weilding Equipments</option>
+              <option value="safety">Safety Equipments</option>
+              <option value="wielding">Weilding Equipments</option>
             </select>
           </div>
 
