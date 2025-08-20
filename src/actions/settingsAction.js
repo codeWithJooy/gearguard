@@ -10,7 +10,10 @@ export const settingsUpload = async (formData) => {
     });
     if (response.data.code == 200) {
       console.log("Settings saved successfully:", response.data);
-      return response.data;
+      return true;
+    }
+    else{
+      return false;
     }
   } catch (error) {
     console.error("Error saving settings:", error);

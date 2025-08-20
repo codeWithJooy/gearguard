@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import DashHeader from "../../../Component/Client/DashHeader/DashHeader";
 import "./Settings.css";
 import { settingsFetch, settingsUpload } from "../../../actions/settingsAction";
+import Spinner from "../../../Component/Spinner/Spinner";
 
 const Settings = () => {
   const [websiteName, setWebsiteName] = useState("");
@@ -9,16 +10,16 @@ const Settings = () => {
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [facebook,setFacebook]=useState("")
-  const [twitter,setTwitter]=useState("")
-  const [instagram,setInstagram]=useState("")
-  const [linkedin,setLinkedin]=useState("")
-  const [file,setFile]=useState(null)
-
+  const [facebook, setFacebook] = useState("");
+  const [twitter, setTwitter] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [linkedin, setLinkedin] = useState("");
+  const [file, setFile] = useState(null);
+  const [openModal,setOpenModal]=useState(false)
 
   const handleLogoUpload = (e) => {
     const file = e.target.files[0];
-    setFile(file)
+    setFile(file);
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -28,10 +29,9 @@ const Settings = () => {
     }
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setOpenModal(true)
     const formData = new FormData();
     formData.append("websiteName", websiteName);
     formData.append("address", address);
@@ -46,6 +46,9 @@ const Settings = () => {
     }
     console.log(formData);
     const response = await settingsUpload(formData);
+    if(response){
+      setOpenModal(false)
+    }
   };
   // Fetch settings on component mount
   useEffect(() => {
@@ -60,11 +63,10 @@ const Settings = () => {
         setEmail(data?.email || "");
         setPhone(data?.phone || "");
         setFacebook(data?.facebook || "");
-        setTwitter(data?.twitter|| "");
-        setInstagram(data?.instagram|| "");
-        setLinkedin(data?.linkedin|| "");
-        setLogoPreview(data?.logo || "")
-
+        setTwitter(data?.twitter || "");
+        setInstagram(data?.instagram || "");
+        setLinkedin(data?.linkedin || "");
+        setLogoPreview(data?.logo || "");
       } catch (error) {
         console.error("Error fetching settings:", error);
       }
@@ -189,57 +191,45 @@ const Settings = () => {
               <div className="cardBody gridLayout">
                 <div className="formGroup">
                   <label>
-                    <i className={`fab fa-facebook`}></i>{" "}
-                     Facebook
+                    <i className={`fab fa-facebook`}></i> Facebook
                   </label>
                   <input
                     type="url"
                     value={facebook}
-                    onChange={(e) =>
-                     setFacebook(e.target.value)
-                    }
+                    onChange={(e) => setFacebook(e.target.value)}
                     placeholder={`https://facebook.com/yourprofile`}
                   />
                 </div>
                 <div className="formGroup">
                   <label>
-                    <i className={`fab fa-twitter`}></i>{" "}
-                     Twitter
+                    <i className={`fab fa-twitter`}></i> Twitter
                   </label>
                   <input
                     type="url"
                     value={twitter}
-                    onChange={(e) =>
-                     setTwitter(e.target.value)
-                    }
+                    onChange={(e) => setTwitter(e.target.value)}
                     placeholder={`https://twitter.com/yourprofile`}
                   />
                 </div>
                 <div className="formGroup">
                   <label>
-                    <i className={`fab fa-instagram`}></i>{" "}
-                     Instagram
+                    <i className={`fab fa-instagram`}></i> Instagram
                   </label>
                   <input
                     type="url"
                     value={instagram}
-                    onChange={(e) =>
-                     setInstagram(e.target.value)
-                    }
+                    onChange={(e) => setInstagram(e.target.value)}
                     placeholder={`https://instagram.com/yourprofile`}
                   />
                 </div>
                 <div className="formGroup">
                   <label>
-                    <i className={`fab fa-linkedin`}></i>{" "}
-                     Linkedin
+                    <i className={`fab fa-linkedin`}></i> Linkedin
                   </label>
                   <input
                     type="url"
                     value={linkedin}
-                    onChange={(e) =>
-                     setLinkedin(e.target.value)
-                    }
+                    onChange={(e) => setLinkedin(e.target.value)}
                     placeholder={`https://linkedin.com/yourprofile`}
                   />
                 </div>
@@ -254,6 +244,9 @@ const Settings = () => {
           </form>
         </div>
       </div>
+      {
+        openModal && <Spinner text={"Uploading Data"}/>
+      }
     </div>
   );
 };
